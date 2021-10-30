@@ -50,13 +50,6 @@ async function run() {
             const body = req.body;
             const query = { _id: ObjectId(id) };
             const resultfind = await placesCollection.findOne(query);
-            // resultfind.user_name = body.user_name;
-            // resultfind.user_email = body.email;
-            // resultfind.user_age = body.age;
-            // resultfind.user_phone = body.phone;
-            // resultfind.user_address = body.address;
-            // resultfind.status = 'pending';
-
             body.name = resultfind.name;
             body.img = resultfind.img;
             body.desc = resultfind.desc;
