@@ -90,7 +90,7 @@ async function run() {
             res.json(result);
         })
 
-        // Update my order
+        // Update my order status
         app.put("/orders/updatestatus", async (req, res) => {
             const body = req.body;
             const query = { _id: ObjectId(body.id) };
